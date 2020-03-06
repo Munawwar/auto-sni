@@ -5,7 +5,8 @@
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "bugs": "https://github.com/DylanPiercey/auto-sni/issues",
   "dependencies": {
-    "greenlock-express": "^2.0.9"
+    "greenlock-express": "^2.0.9",
+    "greenlock-store-fs": "^3.2.2"
   },
   "devDependencies": {
     "hostile": "^1.3.0",
