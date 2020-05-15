@@ -27,7 +27,9 @@ var createServer = require("auto-sni");
 var server = createServer({
   email: ..., // Emailed when certificates expire.
   agreeTos: true, // Required for letsencrypt.
-  debug: true, // Add console messages and uses staging LetsEncrypt server. (Disable in production)
+  // debug true doesn't work anymore. acme-v2 node module throws a 'cannot call some
+  // of undefined' error
+  debug: false,
   domains: ["mysite.com", ["test.com", "www.test.com"]], // List of accepted domain names. (You can use nested arrays to register bundles with LE).
   dir: "~/letsencrypt/etc", // Directory for storing certificates. Defaults to "~/letsencrypt/etc" if not present.
   ports: {
